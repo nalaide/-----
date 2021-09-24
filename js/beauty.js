@@ -1,9 +1,21 @@
 // 个人化妆、清洁用品
-$('.clean-drop-z').mouseover(function() {
-    $(this).addClass('clean-drop-block-z');
+$('.clean-drop-con-z').hover(function() {
+    $(this).toggleClass('clean-drop-block-z');
+    $(this).next().toggleClass('menu-drop-main-show-z');
+    $(this).find('b').css('display', 'block');
+}, function() {
+    $(this).toggleClass('clean-drop-block-z');
+    $(this).next().toggleClass('menu-drop-main-show-z');
+    $(this).find('b').css('display', 'none');
 });
-$('.clean-drop-none-z').mouseout(function() {
-    $('.clean-drop-z').removeClass('clean-drop-block-z');
+$('.clean-drop-none-z').hover(function() {
+    $(this).toggleClass('menu-drop-main-show-z');
+    $(this).prev().toggleClass('box-border-show-z');
+    $(this).prev().find('b').css('display', 'block');
+}, function() {
+    $(this).toggleClass('menu-drop-main-show-z');
+    $(this).prev().toggleClass('box-border-show-z');
+    $(this).prev().find('b').css('display', 'none');
 });
 // 主体部分---品牌
 $('.selector-pic-main-z li').hover(function() {

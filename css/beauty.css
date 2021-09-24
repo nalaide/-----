@@ -148,12 +148,18 @@ li .item-z .item-name-z a:hover {
     height: 23px;
 }
 
-.clean-item-z .clean-drop-block-z .clean-drop-con-z:hover {
-    border-color: #f42424;
-    border-bottom-color: white;
+.clean-item-z .clean-drop-z .clean-drop-block-z {
+    border-color: #f42424 !important;
+    border-bottom-color: white !important;
+}
+
+.clean-item-z .clean-drop-z .box-border-show-z {
+    border-color: #f42424 !important;
+    border-bottom-color: white !important;
 }
 
 .clean-item-z .clean-drop-z .clean-drop-con-z {
+    position: relative;
     float: left;
     padding: 0 10px;
     height: 23px;
@@ -185,16 +191,15 @@ li .item-z .item-name-z a:hover {
     background-color: white;
 }
 
-.clean-drop-block-z:hover .clean-drop-none-z {
-    display: block;
-}
-
 .clean-drop-z .clean-drop-none-z li {
     margin: 0 5px 2px 0;
     float: left;
     width: 68px;
     height: 24px;
     line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .clean-drop-z .clean-drop-none-z li a {
@@ -203,6 +208,31 @@ li .item-z .item-name-z a:hover {
 
 .clean-drop-z .clean-drop-none-z li a:hover {
     color: #f42424;
+}
+
+.menu-drop-main-show-z {
+    display: block !important;
+    border: 1px solid #f00 !important;
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clean-drop-z .clean-drop-con-z b {
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: 23px;
+    left: 0;
+    background-color: #fff;
+    display: none;
+    z-index: 999;
 }
 
 

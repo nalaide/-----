@@ -333,15 +333,16 @@ function laoddataf2(fatherbox) {
         $(value).find('p').attr('title', page1[index].name);
         $(value).find('p').children('a').text(page1[index].name);
     });
-    var smallImg = $('.goods-list-left-z').find('.goods-list-sider-z');
-    smallImg.each(function(index, value) {
-        console.log($(value).find('img'));
-        var obj = page1[index].children;
-        for (var key in obj) {
-            $(value).find('img').attr('src', obj[key].smallPic);
-            // console.log(obj[key].smallPic);
-            // console.log(page1[index].children);
+    var obj = {};
+    var smallImg = $('.goods-list-left-z').find('.goods-list-sider-z').find('img');
+    var index = 0;
+    for (var i = 0; i < page1.length; i++) {
+        for (var j = 0; j < page1[i].children.length; j++) {
+            obj[index] = page1[i].children[j].smallPic;
+            if (index < smallImg.length) {
+                smallImg.eq(index).attr('src', obj[index]);
+                index++;
+            }
         }
-        // console.log(obj);
-    });
+    };
 };
